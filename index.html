@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online play | Santa Secreto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icono.jpg">
+</head>
+
+<header>
+    <h1>Santa Secreto</h1>
+    <nav>
+        <a href="#Participantes">Participantes</a>
+        <a href="#Lista de regalos">Lista de regalos</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <h3>Organizador: @Kelly</h3>
+
+        <h2>Instrucciones:</h2>
+        <p>1. Ingresa tu nombre en el campo de texto. Ejemplo: Gabriel.</p>
+        <p>2. Haz clic en el botón "Descubrir Amigo Secreto".</p>
+        <p>3. Se mostrará el nombre de la persona a la que debes darle tu regalo.</p>
+
+        <div class="card">
+            <h2>Amigo Secreto 🎁</h2>
+            <p>Ingresa tu nombre para saber a quién le debes dar tu regalo:</p>
+
+            <!-- Campo de texto con el id que definiste en tu JS -->
+            <input type="text" id="nombre_participante" placeholder="Escribe tu nombre aquí">
+            <br>
+
+            <!-- Botón que ejecuta la función JavaScript al hacer clic -->
+            <button onclick="buscarAmigoSecreto()">Descubrir Amigo Secreto</button>
+
+            <!-- Elemento donde mostramos la respuesta en pantalla -->
+            <div id="resultado"></div>
+        </div>
+
+        <h2>Estas son las indicaciones dadas por el organizador:</h2>
+
+        <p> Fecha de intercambios: 24 de diciembre de 2026.</p>
+        <p>Presupuesto máximo: $50.</p>
+
+        <section id="Participantes">
+            <h2>Lista de participantes</h2>
+            <h3>Estos son los participantes</h3>
+            <p>1. Kelly</p>
+            <p>2. Silvia</p>
+            <p>3. Stella</p>
+            <p>4. Julián</p>
+            <p>5. María</p>
+            <p>6. Edinson</p>
+            <p>7. Gerardo</p>
+        </section>
+
+        <section id="Lista de regalos">
+            <h2>Lista de regalos</h2>
+            <h3>Regalos sugeridos por los participantes</h3>
+            <div class="grid-regalos">
+
+                <!-- Columna 1 -->
+                <div class="columna-persona">
+                    <h3>Kelly</h3>
+                    <ul>
+                        <li>1. Zapatos deportivos.</li>
+                        <li>2. Maquillaje corrector y/o rubor L'oreal.</li>
+                        <li>3. Forro de portatil.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="columna-persona">
+                    <h3>Silvia</h3>
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3 -->
+                <div class="columna-persona">
+                    <h3>Stella</h3>
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4 -->
+                <div class="columna-persona">
+                    <h3>Julián</h3>
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 5 -->
+                <div class="columna-persona">
+                    <h3>María</h3>
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 6 -->
+                <div class="columna-persona">
+                    <h3>Edinson</h3>
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                    </ul>
+                </div>
+
+                <!-- Columna 7 -->
+                <div class="columna-persona">
+                    <h3>Gerardo</h3>
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                    </ul>
+                </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <img src="banner navidad.jpg" alt="banner navidad" width="450">
+        <p>© 2020 Santa Secreto. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

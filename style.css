@@ -1,0 +1,128 @@
+h2 {
+    margin: 5px;
+    padding: 3px;
+    color: #005f29;
+    font-family: 'tahoma', sans-serif;
+}
+
+h1, h3 {
+    margin: 5px;
+    padding: 3px;
+    color: #910303;
+    font-family: 'tahoma', sans-serif;
+}
+
+body {
+    font-family: 'tahoma', sans-serif;
+    background-color: #fbfdec;
+    color: #502c2c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0rem 60px;
+}
+
+header {
+    color: #040404;
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0rem 60px;
+    text-align: center;
+    font-family: 'tahoma', sans-serif;
+}
+
+nav a {
+    color: #040404;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+header {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+main {
+    max-width: 800px;
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0rem 60px;
+    flex-direction: column;
+}
+
+.card {
+    color: #040404;
+    font-family: 'tahoma', sans-serif;
+    background-color: #fffaf0;
+    /* Fondo crema suave */
+    border: 3px solid #f0e4d7;
+    border-top: 4px solid 005f29;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Contenedor Grid para las 7 columnas */
+.grid-regalos {
+    display: grid;
+    /* Crea 7 columnas de igual tamaño en pantallas grandes */
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+}
+
+/* Estilo individual de cada columna de persona */
+.columna-persona {
+    background-color: #fffaf0;
+    /* Fondo crema suave */
+    text-align: center;
+    border: 3px solid #f0e4d7;
+    border-top: 4px solid 005f29;
+    border-radius: 8px;
+}
+
+.columna-persona h3 {
+    color: #005f29;
+    font-size: 1.1rem;
+}
+
+.columna-persona ul {
+    list-style: none;
+}
+
+.columna-persona li {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+footer {
+    color: #040404;
+    text-align: center;
+    font-family: 'tahoma', sans-serif;
+    padding: auto auto;
+    margin: 0rem 60px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Centra la imagen */
+}
+
+/* Si la pantalla es mediana (tablets), pasa a 3-4 columnas */
+@media (max-width: 1024px) {
+    .grid-regalos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Si la pantalla es pequeña (móviles), se muestra 1 columna por persona */
+@media (max-width: 600px) {
+    .grid-regalos {
+        grid-template-columns: 1fr;
+    }
+}
