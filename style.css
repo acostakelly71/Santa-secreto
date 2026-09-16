@@ -63,38 +63,6 @@ main {
     text-align: center;
 }
 
-/* Contenedor Grid para las 7 columnas */
-.grid-regalos {
-    display: grid;
-    /* Crea 7 columnas de igual tamaño en pantallas grandes */
-    grid-template-columns: repeat(7, 1fr);
-    gap: 1rem;
-}
-
-/* Estilo individual de cada columna de persona */
-.columna-persona {
-    background-color: #fffaf0;
-    /* Fondo crema suave */
-    text-align: center;
-    border: 3px solid #f0e4d7;
-    border-top: 4px solid 005f29;
-    border-radius: 8px;
-}
-
-.columna-persona h3 {
-    color: #005f29;
-    font-size: 1.1rem;
-}
-
-.columna-persona ul {
-    list-style: none;
-}
-
-.columna-persona li {
-    font-size: 0.9rem;
-    color: #555555;
-}
-
 footer {
     color: #040404;
     text-align: center;
