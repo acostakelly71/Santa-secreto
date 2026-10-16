@@ -1,96 +1,151 @@
-h2 {
-    margin: 5px;
-    padding: 3px;
-    color: #005f29;
-    font-family: 'tahoma', sans-serif;
-}
-
-h1, h3 {
-    margin: 5px;
-    padding: 3px;
-    color: #910303;
-    font-family: 'tahoma', sans-serif;
+/* --- ESTILOS GENERALES Y NAVIDEÑOS --- */
+:root {
+    --color-rojo-vino: #7b1113;
+    --color-verde-pino: #1b4332;
+    --color-crema: #fdfbf7;
+    --color-dorado: #d4af37;
+    --color-texto: #2c2c2c;
 }
 
 body {
-    font-family: 'tahoma', sans-serif;
-    background-color: #fbfdec;
-    color: #502c2c;
+    font-family: 'Tahoma', sans-serif;
+    background-color: var(--color-crema);
+    color: var(--color-texto);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0rem 60px;
+    margin: 0;
+    padding: 0 20px;
 }
 
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
 header {
-    color: #040404;
+    background: linear-gradient(135deg, var(--color-rojo-vino), #5a0c0e);
+    color: #ffffff;
     padding: 3rem 2rem;
-    max-width: 800px;
-    margin: 0rem 60px;
     text-align: center;
-    font-family: 'tahoma', sans-serif;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 15px;
 }
 
 nav a {
-    color: #040404;
-    max-width: 800px;
-    margin: 0 auto;
+    color: var(--color-dorado);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- TIPOGRAFÍAS DE TÍTULOS --- */
+h2 {
+    margin: 15px 0;
+    padding: 5px;
+    color: var(--color-verde-pino);
+    font-family: 'Tahoma', sans-serif;
     text-align: center;
-    font-size: 1.2rem;
 }
 
-header {
-    font-size: 2.2rem;
-    font-weight: 700;
+h3 {
+    margin: 10px 0;
+    color: var(--color-rojo-vino);
+    font-family: 'Tahoma', sans-serif;
 }
 
+/* --- CONTENIDO PRINCIPAL --- */
 main {
-    max-width: 800px;
-    padding: 3rem 2rem;
-    max-width: 800px;
-    margin: 0rem 60px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    flex: 1;
+    display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
+/* --- TARJETAS (CARDS) --- */
 .card {
-    color: #040404;
-    font-family: 'tahoma', sans-serif;
-    background-color: #fffaf0;
-    /* Fondo crema suave */
-    border: 3px solid #f0e4d7;
-    border-top: 4px solid 005f29;
-    border-radius: 8px;
+    color: var(--color-texto);
+    font-family: 'Tahoma', sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #e2d9cc;
+    border-top: 5px solid var(--color-verde-pino);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- IMÁGENES --- */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+/* --- PIE DE PÁGINA --- */
 footer {
-    color: #040404;
+    background-color: var(--color-verde-pino);
+    color: #ffffff;
     text-align: center;
-    font-family: 'tahoma', sans-serif;
-    padding: auto auto;
-    margin: 0rem 60px;
+    font-family: 'Tahoma', sans-serif;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-radius: 20px 20px 0 0;
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; /* Centra la imagen */
+/* --- DISEÑO RESPONSIVO (GRID DE REGALOS) --- */
+.grid-regalos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
 
-/* Si la pantalla es mediana (tablets), pasa a 3-4 columnas */
 @media (max-width: 1024px) {
     .grid-regalos {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Si la pantalla es pequeña (móviles), se muestra 1 columna por persona */
 @media (max-width: 600px) {
     .grid-regalos {
         grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2rem;
     }
 }
